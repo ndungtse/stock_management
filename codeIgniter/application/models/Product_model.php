@@ -2,15 +2,21 @@
     class Product_model extends CI_Model{
 
         public function saveproduct(){
+            $p_code = random_int(1, 9999999);
             $data = array(
-                'p_code' => random_int(1, 9999999),
+                'p_code' => $p_code,
                 'p_name' => $this->input->post('name'),
-                'p_price' => $this->input->post('price'),
                 'p_type' => $this->input->post('type'),
                 'p_qoh' => $this->input->post('quantity'),
                 'v_code' => $this->session->userdata('v_code')
             );
-            return $this->db->insert('product', $data);
+            $data1 = array(
+                'price_code' => random_int(1, 9999999),
+                'p_code' => $p_code,
+                'price_amount' => $this->input->post('price'),
+            );
+            $this->db->insert('product', $data);
+            return $this->db->insert('price', $data1);
         }
 
         public function getUserProducts(){
@@ -37,12 +43,15 @@
         public function updateproduct($id){
             $data = array(
                 'p_name' => $this->input->post('p_name'),
-                'p_price' => $this->input->post('p_price'),
                 'p_type' => $this->input->post('p_type'),
                 'p_qoh' => $this->input->post('p_qoh'),
             );
+            $data1 = array(
+                'price_amount' => $this->input->post('p_price'),
+            );
             $this->db->where('p_code', $id);
             $this->db->update('product', $data);
+            $this->db->update('price', $data1);
         }
 
         public function deleteproduct($id){
