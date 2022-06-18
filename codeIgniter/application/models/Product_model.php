@@ -4,10 +4,11 @@
         public function saveproduct(){
             $data = array(
                 'p_code' => random_int(1, 9999999),
-                'p_name' => $this->input->post('p_name'),
-                'p_price' => $this->input->post('p_price'),
-                'p_type' => $this->input->post('p_type'),
-                'p_qoh' => $this->input->post('p_qoh'),
+                'p_name' => $this->input->post('name'),
+                'p_price' => $this->input->post('price'),
+                'p_type' => $this->input->post('type'),
+                'p_qoh' => $this->input->post('quantity'),
+                'v_code' => $this->session->userdata('v_code')
             );
             return $this->db->insert('product', $data);
         }
