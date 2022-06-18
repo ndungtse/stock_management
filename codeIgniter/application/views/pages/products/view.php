@@ -9,32 +9,16 @@
             <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400 " href="../index.php"><i class="fa-solid fa-chart-line"></i>Darshboard</a>
             <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg text-blue-400" href=""><i class="fa-solid fa-box"></i>Products</a>
             <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-store"></i>Inventory</a>
-            <!-- <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Outgoing</a> -->
             <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="../login/index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
 
         </div>
     </nav>
     <div class="flex flex-col w-full items-center mt-6">
         <?php
-        if (isset($_GET['msg'])) {
-            $msg = $_GET['msg'];
-            if ($msg == "Product added successfully!") {
-                echo "<div class='text-green-400 text-center p-2 rounded-lg'>Product Added Successfully</div>";
-            } else if ($msg == "failed") {
-                echo "<div class='text-red-400 text-center p-2 rounded-lg'>Product Adding Failed</div>";
-            }
-        }
         ?>
         <h1 class="text-center font-bold text-2xl">Your Products</h1>
         <?php
-        include "../CRUDE/fetch.php";
-        $crud = new CRUD("product p");
-        $crud->where = "WHERE v_code = '" . $_SESSION['v_code'] . "'";
-        $crud->selection = "p.p_name, p.p_qoh, p.p_type, p.p_code, pr.price_amount";
-        $crud->join = "INNER JOIN price pr ON p.p_code = pr.p_code";
-        $res = $crud->readCustom();
-
-        if ($res->num_rows > 0) { ?>
+        if (count($products)>0) { ?>
             <table class=" border-collapse border-b-2 mt-6 ">
                 <thead>
                     <tr class=" border-collapse border-b-2 ">
@@ -47,7 +31,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    while ($row = $res->fetch_assoc()) : ?>
+                    foreach ($products as $row) : ?>
                         <tr>
                             <td class="text-center h-[100px]"><?php
                                                                 echo $row['p_name'];
@@ -68,7 +52,7 @@
                                 <a class="px-3 py-1 text-white bg-red-500" href="">Delete</a> -->
                             </td>
                         </tr>
-                    <?php endwhile; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         <?php } else { ?>

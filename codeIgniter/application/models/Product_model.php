@@ -1,5 +1,5 @@
 <?php
-    class User_model extends CI_Model{
+    class Product_model extends CI_Model{
 
         public function saveproduct(){
             $data = array(
@@ -13,7 +13,13 @@
             return $this->db->insert('product', $data);
         }
 
-        public function getproduct(){
+        public function getUserProducts(){
+            $query = $this->db->query("SELECT p.p_name, p.p_qoh, p.p_type, p.p_code, pr.price_amount
+             FROM product p INNER JOIN price pr ON p.p_code = pr.p_code WHERE v_code = ".$this->session->userdata('v_code'));
+            return $query->result();
+        }
+
+        public function getProduct(){
             $this->db->select('*');
             $this->db->from('product');
             $query = $this->db->get();

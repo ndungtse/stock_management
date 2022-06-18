@@ -23,7 +23,7 @@
                 <div class="flex flex-wrap text-red-400"><?php echo validation_errors(); ?></div>
                 <div class="flex flex-col w-full mt-6">
                     <label for="name" class="font-semibold">Product Name</label>
-                    <input type="text" placeholder="enter your email" name="name" id="name" class="w-full border-[2px]
+                    <input type="text" placeholder="enter product name" name="name" id="name" class="w-full border-[2px]
                   rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 focus:border-blue-400">
                 </div>
                 <div class="flex flex-col w-full mt-6">

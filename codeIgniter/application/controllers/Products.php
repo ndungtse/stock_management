@@ -2,6 +2,15 @@
     
     class Products extends CI_Controller {
 
+        public function view(){
+            $data['products'] = $this->product_model->getUserProducts();
+
+            $this->load->helper('url');
+            $this->load->view('templates/header', $data);
+            $this->load->view('pages/products/view', $data);
+            $this->load->view('templates/footer', $data);
+        }
+
         public function addproduct(){
             $this->load->helper(array('form', 'url'));
             $this->load->library('form_validation');
