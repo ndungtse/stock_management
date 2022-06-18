@@ -4,10 +4,7 @@
         <div action="signup.php" method="POST" 
             class="flex items-center flex-col p-4 w-[400px] min-w-[280px] ">
             <h2 class="text-2xl font-semibold text-blue-500 text-center">Log into e-Store</h2>
-            <?php
-                var_dump($title) ;
-            ?>
-            
+
             <div class="flex flex-wrap text-red-400"><?php echo validation_errors(); ?></div>
             <div class="flex flex-col w-full mt-4">
                 <label for="name" class="font-semibold">Email</label>

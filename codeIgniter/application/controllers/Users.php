@@ -40,12 +40,13 @@ public function login(){
 				$email = $this->input->post('email');
 				$password = md5($this->input->post('password'));
 
-				$v_code = $this->user_model->login($email, $password);
+				$user = $this->user_model->login($email, $password);
 
-				if($v_code){
+				if($user != false){
 					$user_data = array(
-						'v_code' => $v_code,
-						'email' => $email,
+						'v_code' => $user['v_code'],
+						'email' => $user['v_email'],
+						'v_name' => $user['v_name'],
 						'logged_in' => true
 					);
 
@@ -56,7 +57,6 @@ public function login(){
 					redirect('/');
 				} else {
 					$this->session->set_flashdata('login_failed', 'Login is invalid');
-
 					redirect('users/login');
 				}		
 			}

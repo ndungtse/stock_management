@@ -2,8 +2,6 @@
 	class User_model extends CI_Model{
 
 		public function register($enc_password){
-			// $this->load->library('session');
-
 			$data = array(
 				'v_code' => random_int(1, 9999999),
 				'v_address' => $this->input->post('address'),
@@ -19,11 +17,16 @@
 public function login($email, $password){
 			$this->db->where('v_email', $email);
 			$this->db->where('v_password', $password);
-
 			$result = $this->db->get('vendor');
 
 			if($result->num_rows() == 1){
-				return $result->row(0)->v_code;
+				$user = array(
+					'v_code' => $result->row()->v_code,
+					'v_address' => $result->row()->v_address,
+					'v_email' => $result->row()->v_email,
+					'v_name' => $result->row()->v_name,
+					'v_phone' => $result->row()->v_phone);
+				return $user;
 			} else {
 				return false;
 			}

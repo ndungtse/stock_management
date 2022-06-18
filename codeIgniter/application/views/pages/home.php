@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <div class="w-full flex flex-col h-screen">
         <nav class="navbar bg-white p-3 flex shadow-lg justify-center w-full h-[80px] items-center">
             <div class="brand flex items-center flex-row-reverse justify-end">
@@ -21,7 +19,7 @@ session_start();
             <p class="text-2xl font-bold">
                 Hi. 
                 <?php
-                // echo $_SESSION['v_name'];
+                echo $name;
                 ?>
             </p>
             <div class="flex flex-col">
