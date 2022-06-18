@@ -9,7 +9,7 @@
             <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400 " href="/"><i class="fa-solid fa-chart-line"></i>Darshboard</a>
             <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg text-blue-400" href=""><i class="fa-solid fa-box"></i>Products</a>
             <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-store"></i>Inventory</a>
-            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="/users/login"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
 
         </div>
     </nav>
@@ -46,8 +46,8 @@
                                                                 echo $row->p_type;
                                                                 ?></td>
                             <td class="text-center h-[100px]">
-                                <a href="edit.php?id=<?php echo $row->p_code; ?>" class="text-blue-400 hover:text-blue-500"><i class="fa-solid fa-edit"></i></a>
-                                <a href="delete.php?id=<?php echo $row->p_code; ?>" class="text-red-500 hover:text-red-600"><i class="fa-solid fa-trash-alt"></i></a>
+                                <a href="edit?id=<?php echo $row->p_code; ?>" class="text-blue-400 hover:text-blue-500"><i class="fa-solid fa-edit"></i></a>
+                                <a href="/product/deleteproduct?id=<?php echo $row->p_code; ?>" class="text-red-500 hover:text-red-600"><i class="fa-solid fa-trash-alt"></i></a>
                                 <!-- <a class="px-3 py-1 text-white bg-blue-500" href='edit.php?id=".$row['p_code']"'>Edit</a>
                                 <a class="px-3 py-1 text-white bg-red-500" href="">Delete</a> -->
                             </td>

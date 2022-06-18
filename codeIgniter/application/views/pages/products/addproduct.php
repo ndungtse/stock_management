@@ -24,17 +24,17 @@
                 <div class="flex flex-col w-full mt-6">
                     <label for="name" class="font-semibold">Product Name</label>
                     <input type="text" placeholder="enter product name" name="name" id="name" class="w-full border-[2px]
-                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 focus:border-blue-400">
+                  rounded-lg h-[40px] mt-3 px-3 outline-none text-lg border-slate-800 focus:border-blue-400">
                 </div>
                 <div class="flex flex-col w-full mt-6">
                     <label for="text" class="font-semibold">product quantity</label>
                     <input type="text" placeholder="enter product quantity" name="quantity" id="password" class="w-full border-[2px]
-                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 focus:border-blue-400">
+                  rounded-lg h-[40px] mt-3 px-3 outline-none text-lg border-slate-800 focus:border-blue-400">
                 </div>
                 <div class="flex flex-col w-full mt-6">
                     <label for="text" class="font-semibold">product price</label>
                     <input type="text" placeholder="enter product price" name="price" id="password" class="w-full border-[2px]
-                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 focus:border-blue-400">
+                  rounded-lg h-[40px] mt-3 px-3 outline-none text-lg border-slate-800 focus:border-blue-400">
                 </div>
                 <div class="flex  w-full mt-6 justify-between items-center">
                     <label for="text" class="font-semibold">Product Type</label>

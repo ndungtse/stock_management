@@ -40,8 +40,9 @@
             $this->load->library('form_validation');
 
             $data['title'] = 'Update';
-            // $id = $_GET['id'];
-            // $data['product'] = $this->product_model->getproductbyid($id);
+            $id = $_GET['id'];
+            $data['product'] = $this->product_model->getproductbyid($id);
+            $data['price'] = $this->product_model->getProductPrice($id);
 
             $this->form_validation->set_rules('name', 'name', 'required|min_length[3]');
             $this->form_validation->set_rules('type', 'product type', 'required');
@@ -53,7 +54,8 @@
                 $this->load->view('pages/products/updateproduct', $data);
                 $this->load->view('templates/footer');
             } else {
-                $this->product_model->updateproduct();
+                $this->product_model->updateproduct($id);
+                // $this->product_model->updateProductPrice($id);
                 $this->session->set_flashdata('product_updated', 'Product updated');
 
                 redirect('/');

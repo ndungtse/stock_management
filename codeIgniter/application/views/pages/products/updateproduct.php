@@ -9,8 +9,8 @@
             </div>
 
             <div class="links flex w-full gap-1 ml-5 max-w-[700px]">
-                <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg text-blue-400 " href=""><i class="fa-solid fa-chart-line"></i>Darshboard</a>
-                <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="/products/view"><i class="fa-solid fa-box"></i>Products</a>
+                <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400 " href=""><i class="fa-solid fa-chart-line"></i>Darshboard</a>
+                <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg text-blue-400 " href="/products/view"><i class="fa-solid fa-box"></i>Products</a>
                 <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-store"></i>Inventory</a>
                 <!-- <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Outgoing</a> -->
                 <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="../login/index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
@@ -23,30 +23,32 @@
                 <div class="flex flex-wrap text-red-400"><?php echo validation_errors(); ?></div>
                 <div class="flex flex-col w-full mt-6">
                     <label for="name" class="font-semibold">Product Name</label>
-                    <input type="text" placeholder="enter product name" name="name" id="name" class="w-full border-[2px]
-                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 focus:border-blue-400">
+                    <input type="text" value="<?=$product->p_name ?>"
+                     placeholder="enter product name" name="name" id="name" class="w-full border-[2px]
+                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 text-lg focus:border-blue-400">
                 </div>
                 <div class="flex flex-col w-full mt-6">
                     <label for="text" class="font-semibold">product quantity</label>
-                    <input type="text" placeholder="enter product quantity" name="quantity" id="password" class="w-full border-[2px]
-                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 focus:border-blue-400">
+                    <input  value="<?=$product->p_qoh ?>"type="text" placeholder="enter product quantity" name="quantity" id="password" class="w-full border-[2px]
+                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 text-lg focus:border-blue-400">
                 </div>
                 <div class="flex flex-col w-full mt-6">
                     <label for="text" class="font-semibold">product price</label>
-                    <input type="text" placeholder="enter product price" name="price" id="password" class="w-full border-[2px]
-                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 focus:border-blue-400">
+                    <input type="text" placeholder="enter product price"  value="<?=$price[0]->price_amount ?>" name="price" id="password" class="w-full border-[2px]
+                  rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 text-lg focus:border-blue-400">
                 </div>
                 <div class="flex  w-full mt-6 justify-between items-center">
                     <label for="text" class="font-semibold">Product Type</label>
-                    <select class="ml-3 w-1/2 bg-blue-400 outline-none p-2 text-white" name="type" id="">
-                        <option value="">Select type</option>
+                    <select class="ml-3 w-1/2 bg-blue-400 outline-none p-2 text-white"
+                       name="type" id="">
+                        <option value="<?=$product->p_type ?>"><?=$product->p_type ?></option>
                         <option value="food">Food</option>
                         <option value="drink">Drink</option>
                         <option value="equipment">Equipment</option>
                     </select>
                 </div>
                 <input name="submit" class="bg-blue-500 px-4 py-2 mx-auto w-full 
-             cursor-pointer text-white rounded-lg mt-6" type="submit" value="Add Product">
+             cursor-pointer text-white rounded-lg mt-6" type="submit" value="Update Product">
             </div>
         </div>
     </div>

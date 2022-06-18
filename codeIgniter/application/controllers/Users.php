@@ -65,6 +65,7 @@ public function login(){
 		public function logout(){
 			$this->session->unset_userdata('logged_in');
 			$this->session->unset_userdata('v_code');
+			$this->session->unset_userdata('v_name');
 			$this->session->unset_userdata('email');
 
 			$this->session->set_flashdata('user_loggedout', 'You are now logged out');

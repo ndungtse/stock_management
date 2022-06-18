@@ -25,9 +25,10 @@
             return $query->result();
         }
 
-        public function getProduct(){
-            $this->db->select('*');
-            $this->db->from('product');
+        public function getProductPrice($p_code){
+            $this->db->select('price_amount');
+            $this->db->from('price');
+            $this->db->where("p_code", $p_code);
             $query = $this->db->get();
             return $query->result();
         }
@@ -46,13 +47,19 @@
                 'p_type' => $this->input->post('p_type'),
                 'p_qoh' => $this->input->post('p_qoh'),
             );
-            $data1 = array(
-                'price_amount' => $this->input->post('p_price'),
-            );
+            $data1 =  $this->input->post('p_price');
+
             $this->db->where('p_code', $id);
             $this->db->update('product', $data);
             $this->db->update('price', $data1);
         }
+        // public function updateProductPrice($id){
+        //     $data = array(
+        //         'price_amount' => $this->input->post('p_price'),
+        //     );
+        //     $this->db->where('p_code', $id);
+        //     $this->db->update('price', $data);
+        // }
 
         public function deleteproduct($id){
             $this->db->where('p_code', $id);
