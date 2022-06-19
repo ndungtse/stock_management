@@ -1,18 +1,84 @@
-
-  #nav{ 
-  margin:30px 0;
+#nav {
+  margin: 30px 0;
   color: #000000;
-  }
-  #nav a {    
-  font-size: 20px;  
+}
+
+#nav a {
+  font-size: 20px;
   padding: 0.2em 0.5em;
-  margin-top: 22px;  
-  font-weight: 600;  
-  }  
-  a:hover, a:visited, a:link, a:active {  
-      text-decoration: none;  
-  }  
-.active{
-    background-color: #516bfe;
-    color: white;
+  margin-top: 22px;
+  font-weight: 600;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
+.active {
+  background-color: #516bfe;
+  color: white;
+}
+
+.bx-menu::before {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .cont {
+    flex-direction: row;
+  }
+
+  .navbar {
+    height: 100%;
+    position: absolute;
+    width: 160px;
+    left: -500px;
+    transition: all 0.5s;
+  }
+
+  .brand {
+    margin-top: 5vh;
+  }
+
+  .navbar,
+  .links {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .links {
+    margin-top: 10vh;
+  }
+  .show{
+    left: 0;
+  }
+
+  .bx-menu::before {
+    display: block;
+    z-index: 3;
+  }
+  .bx-menu{
+    z-index: 3;
+  }
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  height: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

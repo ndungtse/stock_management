@@ -10,6 +10,7 @@ class Products extends CI_Controller
 
             $this->load->helper('url');
             $this->load->view('templates/header', $data);
+            $this->load->view('templates/navbar', $data);
             $this->load->view('pages/products/view', $data);
             $this->load->view('templates/footer', $data);
         } else {
@@ -32,6 +33,7 @@ class Products extends CI_Controller
 
             if ($this->form_validation->run() === FALSE) {
                 $this->load->view('templates/header', $data);
+                $this->load->view('templates/navbar', $data);
                 $this->load->view('pages/products/addproduct', $data);
                 $this->load->view('templates/footer');
             } else {
@@ -65,6 +67,7 @@ class Products extends CI_Controller
 
             if ($this->form_validation->run() === FALSE) {
                 $this->load->view('templates/header', $data);
+                $this->load->view('templates/navbar', $data);
                 $this->load->view('pages/products/updateproduct', $data);
                 $this->load->view('templates/footer');
             } else {

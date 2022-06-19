@@ -6,10 +6,11 @@
                 show_404();
             }
             else if($this->session->userdata('logged_in')) {
-                $data['title'] = ucfirst($page);
+                $data['title'] = $page;
                 $data['name'] = $this->session->userdata('u_name');
                 $this->load->helper('url');
                 $this->load->view('templates/header', $data);
+                $this->load->view('templates/navbar', $data);
                 $this->load->view('pages/'.$page, $data);
                 $this->load->view('templates/footer', $data);
             }

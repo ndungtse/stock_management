@@ -18,5 +18,9 @@ $(document).ready (function () {
         var endItem = startItem + rowsShown;  
         $('#data tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).  
         css('display','table-row').animate({opacity:1}, 300);  
-    });  
+    });
+    
+    $('.bx-menu').click(()=>{
+        $('.navbar').toggleClass('show');
+    });
 });
