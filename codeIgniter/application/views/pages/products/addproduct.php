@@ -10,7 +10,7 @@
 
             <div class="links flex w-full gap-1 ml-5 max-w-[700px]">
                 <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg text-blue-400 " href=""><i class="fa-solid fa-chart-line"></i>Darshboard</a>
-                <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="./products.php"><i class="fa-solid fa-box"></i>Products</a>
+                <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="/products/view"><i class="fa-solid fa-box"></i>Products</a>
                 <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-store"></i>Inventory</a>
                 <!-- <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Outgoing</a> -->
                 <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="../login/index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
@@ -43,6 +43,8 @@
                         <option value="food">Food</option>
                         <option value="drink">Drink</option>
                         <option value="equipment">Equipment</option>
+                        <option value="equipment">Electronic devices</option>
+                        <option value="equipment">Others</option>
                     </select>
                 </div>
                 <input name="submit" class="bg-blue-500 px-4 py-2 mx-auto w-full 

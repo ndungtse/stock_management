@@ -1,5 +1,5 @@
 <?php
-    echo form_open('products/updateproduct');
+    echo form_open('products/updateproduct?id='.$id);
 ?>
 <div class="w-full flex flex-col h-screen">
         <nav class="navbar bg-white p-3 flex shadow-lg justify-center w-full h-[80px] items-center">
@@ -45,6 +45,8 @@
                         <option value="food">Food</option>
                         <option value="drink">Drink</option>
                         <option value="equipment">Equipment</option>
+                        <option value="equipment">Electronic devices</option>
+                        <option value="equipment">Others</option>
                     </select>
                 </div>
                 <input name="submit" class="bg-blue-500 px-4 py-2 mx-auto w-full 

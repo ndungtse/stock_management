@@ -18,7 +18,7 @@
             </div>
             
             <input name="submit" class="bg-blue-500 px-4 py-2 mx-auto w-full 
-             cursor-pointer text-white rounded-lg mt-4" type="submit" value="Signup">
+             cursor-pointer text-white rounded-lg mt-4" type="submit" value="Log In">
 
              <div class="flex w-full mt-4 items-center">
                 <p>Don't have an account?</p>

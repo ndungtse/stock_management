@@ -44,9 +44,9 @@ public function login(){
 
 				if($user != false){
 					$user_data = array(
-						'v_code' => $user['v_code'],
-						'email' => $user['v_email'],
-						'v_name' => $user['v_name'],
+						'u_code' => $user['u_code'],
+						'u_email' => $user['u_email'],
+						'u_name' => $user['u_name'],
 						'logged_in' => true
 					);
 
@@ -64,8 +64,8 @@ public function login(){
 
 		public function logout(){
 			$this->session->unset_userdata('logged_in');
-			$this->session->unset_userdata('v_code');
-			$this->session->unset_userdata('v_name');
+			$this->session->unset_userdata('u_code');
+			$this->session->unset_userdata('u_name');
 			$this->session->unset_userdata('email');
 
 			$this->session->set_flashdata('user_loggedout', 'You are now logged out');

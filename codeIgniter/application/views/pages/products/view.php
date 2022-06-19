@@ -13,10 +13,25 @@
 
         </div>
     </nav>
-    <div class="flex flex-col w-full items-center mt-6">
+    <?php
+        if(isset($_GET['info'])){  
+    ?>
+    <div class="flex w-full bg-green-400 text-white py-2 items-center justify-center">
+        <p class="">
+            <?php
+                echo $_GET['info'];
+            ?>
+        </p>
+    </div>
+    <?php
+        }
+    ?>
+    <div class="flex flex-col w-full items-center mt-2">
         <?php
         ?>
         <h1 class="text-center font-bold text-2xl">Your Products</h1>
+        <a class="py-2 mt-4 px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/addproduct">
+            <i class="bx bx-plus"></i> Add New Product</a>
         <?php
         if (count($products)>0) { ?>
             <table class=" border-collapse border-b-2 mt-6 ">
@@ -46,8 +61,8 @@
                                                                 echo $row->p_type;
                                                                 ?></td>
                             <td class="text-center h-[100px]">
-                                <a href="edit?id=<?php echo $row->p_code; ?>" class="text-blue-400 hover:text-blue-500"><i class="fa-solid fa-edit"></i></a>
-                                <a href="/product/deleteproduct?id=<?php echo $row->p_code; ?>" class="text-red-500 hover:text-red-600"><i class="fa-solid fa-trash-alt"></i></a>
+                                <a href="/products/updateproduct?id=<?php echo $row->p_code; ?>" class="text-blue-400 hover:text-blue-500"><i class="fa-solid fa-edit"></i></a>
+                                <a href="/products/removeproduct?id=<?php echo $row->p_code; ?>" class="text-red-500 hover:text-red-600"><i class="fa-solid fa-trash-alt"></i></a>
                                 <!-- <a class="px-3 py-1 text-white bg-blue-500" href='edit.php?id=".$row['p_code']"'>Edit</a>
                                 <a class="px-3 py-1 text-white bg-red-500" href="">Delete</a> -->
                             </td>
@@ -58,7 +73,6 @@
         <?php } else { ?>
             <div class="flex w-full items-center h-full mt-7 flex-col justify-center">
                 <p class="text-xl font-semibold">You currently have no Registered</p>
-                <a href="./addproduct.php" class="ml-4 text-blue-600">Add a Product</a>
             </div>
         <?php  } ?>
     </div>
