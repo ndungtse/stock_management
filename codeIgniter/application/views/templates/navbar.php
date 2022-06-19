@@ -7,10 +7,14 @@
         </div>
 
         <div class="links flex w-full gap-1 ml-5 max-w-[700px]">
-            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400 " href="/"><i class="fa-solid fa-chart-line"></i>Darshboard</a>
-            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg text-blue-400" href=""><i class="fa-solid fa-box"></i>Products</a>
-            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href=""><i class="fa-solid fa-store"></i>Inventory</a>
-            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg hover:text-blue-400" href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg
+                <?php if($title=='home'){echo 'text-blue-400';}; ?> hover:text-blue-400 " href="/"><i class="fa-solid fa-chart-line"></i>Darshboard</a>
+            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg
+            <?php if($title=='Products'){echo 'text-blue-400';}; ?> hover:text-blue-400" href="/products/view"><i class="fa-solid fa-box"></i>Products</a>
+            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg
+            <?php if($title=='inventory'){echo 'text-blue-400';}; ?> hover:text-blue-400" href="/inventory"><i class="fa-solid fa-store"></i>Inventory</a>
+            <a class="p-2 w-full flex gap-2 items-center text-sm rounded-lg
+            <?php if($title==''){echo 'text-blue-400';}; ?> hover:text-blue-400" href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
 
         </div>
     </nav>

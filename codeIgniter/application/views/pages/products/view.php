@@ -16,8 +16,14 @@
         <?php
         ?>
         <h1 class="text-center font-bold text-2xl">Your Products</h1>
-        <a class="py-1 mt-4 px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/addproduct">
+        <div class="flex mt-4 items-center">
+            <a class="py-1 px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/addproduct">
             <i class="bx bx-plus"></i> Add New</a>
+            <p class="mx-4">OR</p>
+            <a class="py-1 px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/printproducts">
+            Print your products</a>
+        </div>
+        
         <div class=" overflow-x-auto w-full">
             <?php
             if (count($products) > 0) { ?>

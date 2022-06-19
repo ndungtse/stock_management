@@ -27,8 +27,8 @@
                         <option value="food">Food</option>
                         <option value="drink">Drink</option>
                         <option value="equipment">Equipment</option>
-                        <option value="equipment">Electronic devices</option>
-                        <option value="equipment">Others</option>
+                        <option value="electronic device">Electronic devices</option>
+                        <option value="others">Others</option>
                     </select>
                 </div>
                 <input name="submit" class="bg-blue-500 px-4 py-2 mx-auto w-full 
