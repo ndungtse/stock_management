@@ -107,7 +107,11 @@ class Products extends CI_Controller
             $pdf = new FPDF();
             $data = $this->product_model->getUserProducts();
             $pdf->AddPage();
+            $num=1;
             $header = array('Product Name','Product Type', 'Product Price', 'Product Quantity');
+
+            $pdf->SetFont('Arial', 'B', '12');
+            $pdf->Cell(15, 6, 'No.', 1);
             foreach ($header as $field) {
                 $pdf->SetFont('Arial', 'B', '12');
                 $pdf->Cell(38, 6, $field, 1);
@@ -115,11 +119,13 @@ class Products extends CI_Controller
             $pdf->Ln();
             foreach ($data as $row) {
                 $pdf->SetFont('Arial', '', '10');
+                $pdf->Cell(15, 6, $num, 1);
                 $pdf->Cell(38, 6, $row->p_name, 1);
                 $pdf->Cell(38, 6, $row->p_type, 1);
                 $pdf->Cell(38, 6, $row->price_amount, 1);
                 $pdf->Cell(38, 6, $row->p_qoh, 1);
                 $pdf->Ln();
+                $num++;
             }
             $pdf->Output();
         }else{

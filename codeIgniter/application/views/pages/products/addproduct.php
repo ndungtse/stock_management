@@ -28,6 +28,7 @@
                         <option value="drink">Drink</option>
                         <option value="equipment">Equipment</option>
                         <option value="electronic device">Electronic devices</option>
+                        <option value="clothes">Clothes</option>
                         <option value="others">Others</option>
                     </select>
                 </div>
