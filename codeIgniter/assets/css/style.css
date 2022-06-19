@@ -1,0 +1,18 @@
+
+  #nav{ 
+  margin:30px 0;
+  color: #000000;
+  }
+  #nav a {    
+  font-size: 20px;  
+  padding: 0.2em 0.5em;
+  margin-top: 22px;  
+  font-weight: 600;  
+  }  
+  a:hover, a:visited, a:link, a:active {  
+      text-decoration: none;  
+  }  
+.active{
+    background-color: #516bfe;
+    color: white;
+}

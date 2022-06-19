@@ -26,7 +26,7 @@
     <?php
         }
     ?>
-    <div class="flex flex-col w-full items-center mt-2">
+    <div class="flex page flex-col w-full items-center mt-2" align="center">
         <?php
         ?>
         <h1 class="text-center font-bold text-2xl">Your Products</h1>
@@ -34,7 +34,7 @@
             <i class="bx bx-plus"></i> Add New Product</a>
         <?php
         if (count($products)>0) { ?>
-            <table class=" border-collapse border-b-2 mt-6 ">
+            <table class=" border-collapse border-b-2 mt-6 "  id="data" align="center">
                 <thead>
                     <tr class=" border-collapse border-b-2 ">
                         <th class="w-[10%]">Product Name</th>

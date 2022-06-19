@@ -4,7 +4,7 @@
 <?php echo form_open('users/signup'); ?>
     <div class="w-full flex flex-col h-screen items-center justify-center">
         <div action="signup.php" method="POST" 
-            class="flex items-center flex-col p-4 w-[400px] min-w-[280px] ">
+            class="flex shadow-xl border-[1px] items-center flex-col p-4 w-[400px] min-w-[280px] ">
             <h2 class="text-2xl font-semibold text-blue-500 text-center">Signup and get started with e-Store</h2>
             
             <div class="flex flex-wrap text-red-400"><?php echo validation_errors(); ?></div>
