@@ -1,5 +1,7 @@
 <?php
-    echo form_open('products/updateproduct?id='.$id);
+    echo 
+    
+    form_open('products/updateproduct?id='.$id);
 ?>
 
         <div class="flex w-full flex-col h-full items-center justify-center">

@@ -16,5 +16,8 @@
             return $query->row_array();
         }
 
+        public function getsoldbyuser(){
+           $query = $this->db->get_where('sold', array('u_code' => $this->session->userdata('u_code')));
+            return $query->result();
+        }
     }
-?>
