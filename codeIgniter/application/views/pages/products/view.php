@@ -30,11 +30,11 @@
                 <table class="min-w-[500px]border-collapse border-b-2 mt-6 " id="data" align="center">
                     <thead>
                         <tr class=" border-collapse border-b-2 ">
-                            <th class="w-[10%]">Product Name</th>
-                            <th class="w-[10%]">Product Price</th>
-                            <th class="w-[10%]">Product Quantity</th>
-                            <th class="w-[10%]">Product Type</th>
-                            <th class="w-[10%]">Action</th>
+                            <th class="w-[10%] text-center">Product Name</th>
+                            <th class="w-[10%] text-center">Product Price</th>
+                            <th class="w-[10%] text-center">Product Quantity</th>
+                            <th class="w-[10%] text-center">Product Type</th>
+                            <th class="w-[10%] text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>

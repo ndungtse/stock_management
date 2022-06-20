@@ -8,6 +8,7 @@
                 'p_name' => $this->input->post('name'),
                 'p_type' => $this->input->post('type'),
                 'p_qoh' => $this->input->post('quantity'),
+                'p_rem' => $this->input->post('quantity'),
                 'u_code' => $this->session->userdata('u_code')
             );
             $data1 = array(

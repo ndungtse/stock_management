@@ -21,7 +21,7 @@
                 </div>
                 <div class="flex flex-col w-full mt-6">
                     <label for="text" class="font-semibold">product price</label>
-                    <input type="text" placeholder="enter product price"  value="<?=$price[0]->price_amount ?>" name="price" id="password" class="w-full border-[2px]
+                    <input type="text" placeholder="enter product price per 1 item"  value="<?=$price[0]->price_amount ?>" name="price" id="password" class="w-full border-[2px]
                   rounded-lg h-[40px] mt-3 px-3 outline-none border-slate-800 text-lg focus:border-blue-400">
                 </div>
                 <div class="flex  w-full mt-6 justify-between items-center">

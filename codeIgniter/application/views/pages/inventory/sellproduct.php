@@ -3,7 +3,7 @@
   <div class=" w-full h-full  items-center justify-center sellform">
         <div class="flex items-center justify-center w-full h-full">
         <?php
-        echo form_open('/inventory/sellproduct?d='.$_GET['d'].'&p='.$_GET['p']);
+        echo form_open('/inventory/sellproduct?d='.$_GET['d'].'&p='.$_GET['p'].'&n='.$_GET['n'].'&q='.$_GET['q']);
         ?>
             <div class="w-[300px] bg-white p-7 flex flex-col items-center">
                 <p class="text-lg text-center asell font-semibold">
