@@ -70,5 +70,20 @@
             $this->db->delete('prices');
         }
 
+        public function getUserCountProducts(){
+            $query = $this->db->query("SELECT SUM(p_qoh) as p_sum FROM products WHERE u_code = ".$this->session->userdata('u_code'));
+            return $query->result_array();
+        }
+
+        public function getUserIncome(){
+            $query = $this->db->query("SELECT SUM(s_cost) as s_sum FROM sold WHERE u_code = ".$this->session->userdata('u_code'));
+            return $query->result_array();
+        }
+
+        public function getCountSold(){
+            $query = $this->db->query("SELECT SUM(q_sold) as c_sold FROM sold WHERE u_code = ".$this->session->userdata('u_code'));
+            return $query->result_array();
+        }
+
     }
 ?>

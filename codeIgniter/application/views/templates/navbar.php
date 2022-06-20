@@ -8,7 +8,7 @@
 
         <div class="links  flex w-full ml-8 max-w-[700px]">
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg
-                <?php if($title=='home'){echo 'text-primary';}; ?> hover:text-blue-400 " href="/"><i class="fa-solid fa-chart-line"></i>Darshboard</a>
+                <?php if($title=='home'){echo 'text-primary';}; ?> hover:text-blue-400 " href="/"><i class="fa-solid fa-chart-line"></i>Dashboard</a>
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg
             <?php if($title=='Products'){echo 'text-primary';}; ?> hover:text-blue-400" href="/products/view"><i class="fa-solid fa-box"></i>Products</a>
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg

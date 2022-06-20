@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #nav {
   margin: 30px 0;
   color: #000000;
@@ -68,6 +74,7 @@ a:active {
   background: transparent;
   height: 10px;
   border-radius: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -84,4 +91,9 @@ a:active {
 }
 .act{
   color: #516bfe!important;
+}
+#myChart{
+  width: 80%;
+  height: 80vh;
+  /* transform: scale(0.7); */
 }
