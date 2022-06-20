@@ -82,3 +82,6 @@ a:active {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.act{
+  color: #516bfe!important;
+}

@@ -1,18 +1,34 @@
-
-
- <?php
-    if (isset($_GET['info'])) {
-    ?>
-        <div class="flex w-full bg-green-400 text-white py-2 items-center justify-center">
-            <p class="">
-                <?php
-                echo $_GET['info'];
-                ?>
-            </p>
+<?php
+if (isset($_GET['info'])) {
+?>
+    <div class="flex w-full bg-green-400 text-white py-2 items-center justify-center">
+        <p class="">
+            <?php
+            echo $_GET['info'];
+            ?>
+        </p>
+    </div>
+<?php
+}
+?>
+    <div class="absolute w-full h-screen bg-[black] bg-opacity-60 items-center justify-center hidden sellform">
+        <div class="flex items-center justify-center w-full h-full">
+        <?php
+        echo form_open('/inventory/sellproduct');
+        ?>
+            <div class="w-[300px] bg-white p-7 flex flex-col items-center">
+                <div class="flex w-full justify-end"><i id="close" class="bx bx-x text-3xl cursor-pointer text-danger"></i></div>
+                <p class="text-lg text-center asell font-semibold"></p>
+                <p>Enter the amount you want to sell</p>
+                <input value="1" type="text" placeholder="enter the amount" name="quantity" class="w-[100px] border-[2px]
+                        v  rounded-lg h-[40px] mt-2 px-3 text-lg outline-none border-slate-800 focus:border-blue-400">
+                <a href="" class="text-white  btn btn-primary sell mt-4 px-4 rounded-md py-1 hover:bg-blue-500 bg-blue-600">confirm</a>
+            </div>
+            <?php
+        echo form_close();
+        ?>
         </div>
-    <?php
-    }
-    ?>
+    </div>
     <div class="flex page flex-col w-full items-center mt-2" align="center">
         <div class=" overflow-x-auto w-full">
             <?php
@@ -44,10 +60,11 @@
                                                                     echo $row->p_type;
                                                                     ?></td>
                                 <td class="text-center h-[100px]">
-                                    <?php if ($row->sold == 0) {?>
-                                    <a href="/products/updateproduct?id=<?php echo $row->p_code; ?>" class="text-white px-4 rounded-md py-1 hover:bg-blue-500 bg-blue-600">sell</a>
+                                    <?php if ($row->sold == 0) { ?>
+                                        <a href="/inventory/sellproduct?d=<?php echo $row->price_amount; ?>&p=<?php echo $row->p_code; ?>&n=<?php echo $row->p_name; ?>"
+                                         class="text-white btn btn-primary px-4 rounded-md py-1 hover:bg-blue-500 bg-blue-600">sell</a>
                                     <?php } else { ?>
-                                    <a href="/products/removeproduct?id=<?php echo $row->p_code; ?>" class="text-white px-4 rounded-md py-1 hover:bg-red-500 bg-red-600"><i class="fa-solid fa-trash-alt"></i></a>
+                                        <div class="text-white px-4 btn btn-success rounded-md py-1 hover:bg-green-500 "><i class="fa-solid fa-trash-alt"></i></div>
                                     <?php } ?>
                                 </td>
                             </tr>

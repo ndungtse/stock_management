@@ -1,4 +1,4 @@
-$(document).ready (function () {  
+$(document).ready (()=> {  
     $('#data').after ('<div id="nav"></div>');  
     var rowsShown = 4;  
     var rowsTotal = $('#data tbody tr').length;  
@@ -22,5 +22,19 @@ $(document).ready (function () {
     
     $('.bx-menu').click(()=>{
         $('.navbar').toggleClass('show');
+    });
+
+    $('.startsell').click(()=>{
+        $('.sellform').show();
+        let productel = $('.startsell');
+        let proname = productel.attr('name');
+        let price = productel.attr('price');
+        let p_code = productel.attr('p_code');
+        $('.asell').text("You are about to sell " + proname+" ,"+price+" frw each.");
+        $('.sell').attr('href','/inventory/sellproduct?d='+price+'&p='+p_code);
+    });
+
+    $('#close').click(()=>{
+        $('.sellform').hide();
     });
 });
