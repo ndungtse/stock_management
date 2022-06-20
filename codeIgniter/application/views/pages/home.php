@@ -23,8 +23,8 @@
                 </div>
                 <div class="flex flex-col w-full">
                     <h2 class="font-semibold text-2xl mt-4 text-center">Statistics</h2>
-                    <div class="grid text-white w-full grid-cols-3 gap-[10%] mt-3">
-                        <div class="bg-primary aspect-[5/4] rounded-xl items-center justify-center">
+                    <div class="grid text-white w-full grid-cols-2 homegrid gap-[10%] sm:grid-cols-3 mt-3">
+                        <div class="bg-primary aspect-[5/4] p-3 rounded-xl items-center justify-center">
                             <div class="flex flex-col items-center justify-center h-full w-full">
                                 <p class="text-xl text-center">Products Added</p>
                                 <p class="text-3xl text-center"><?php
@@ -32,7 +32,7 @@
                                                                 ?></p>
                             </div>
                         </div>
-                        <div class="bg-success aspect-[5/4] rounded-xl items-center justify-center">
+                        <div class="bg-success aspect-[5/4] p-3 rounded-xl items-center justify-center">
                             <div class="flex flex-col items-center justify-center h-full w-full">
                                 <p class="text-xl text-center">Total Income</p>
                                 <p class="text-3xl text-center"><?php
@@ -41,7 +41,7 @@
                                 <p>RWF</p>
                             </div>
                         </div>
-                        <div class="bg-warning aspect-[5/4] rounded-xl items-center justify-center">
+                        <div class="bg-warning aspect-[5/4] p-3 rounded-xl items-center justify-center">
                             <div class="flex flex-col items-center justify-center h-full w-full">
                                 <p class="text-xl text-center">Products Sold</p>
                                 <p class="text-3xl text-center"><?php
@@ -53,7 +53,7 @@
                     <div class="flex flex-col">
                         <h2 class="font-semibold text-2xl mt-4 text-center">Product supplying curve</h2>
                         <div id="Chart" class="h-[50vh] w-full items-center justify-center">
-                            <canvas id="myChart" class="max-w-[700px] mx-auto max-h-full"></canvas>
+                            <canvas id="myChart" class="max-w-[700px] w-[30%] min-w[280px] mx-auto max-h-full"></canvas>
                         </div>
                     </div>
                 </div>

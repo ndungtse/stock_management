@@ -39,7 +39,7 @@
              cursor-pointer text-white rounded-lg mt-4" type="submit" value="Signup">
 
              <div class="flex w-full mt-4 items-center">
-                <p>Already have an account?</p>
+                <p class="mb-0">Already have an account?</p>
                 <a class="ml-3 text-blue-600" href="/users/login">Login</a>
              </div>
         </div>

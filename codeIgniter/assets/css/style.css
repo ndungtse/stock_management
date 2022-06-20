@@ -38,7 +38,7 @@ a:active {
 
   .navbar {
     height: 100%;
-    position: absolute;
+    position: absolute!important;
     width: 160px;
     left: -500px;
     transition: all 0.5s;
@@ -67,6 +67,9 @@ a:active {
   }
   .bx-menu{
     z-index: 3;
+  }
+  .page{
+    width: 100%;
   }
 }
 
@@ -97,3 +100,12 @@ a:active {
   height: 80vh;
   /* transform: scale(0.7); */
 }
+
+@media screen and (max-width: 400px) {
+  .homegrid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  

@@ -21,7 +21,7 @@
              cursor-pointer text-white rounded-lg mt-4" type="submit" value="Log In">
 
              <div class="flex w-full mt-4 items-center">
-                <p>Don't have an account?</p>
+                <p class="mb-0">Don't have an account?</p>
                 <a class="ml-3 text-blue-600" href="/users/signup">Sign Up</a>
              </div>
         </div>
