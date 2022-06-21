@@ -128,6 +128,8 @@ class Products extends CI_Controller
                 $num++;
             }
             $pdf->Output();
+            // $file = time().'.pdf';
+            // $pdf->output($file,'D');
         }else{
             redirect('/users/login');
         }
