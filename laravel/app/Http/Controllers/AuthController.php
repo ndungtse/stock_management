@@ -36,14 +36,14 @@ class AuthController extends Controller
                 $request->session()->put('u_phone',$user->u_phone);
                 $request->session()->put('u_address',$user->u_address);
 
-                return redirect()->route('/')
+                return redirect('/')
                     ->with('success', 'Welcome '.$user->u_name);
             }else{
-                return redirect()->route('login')
+                return redirect('/login')
                     ->with('error', 'Invalid password.');
             }
         }else{
-            return redirect()->route('login')
+            return redirect('/login')
                 ->with('error', 'Invalid email.');
         }
     }
