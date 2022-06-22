@@ -39,8 +39,31 @@ class UserController extends Controller
             ->with('success', 'User created successfully.');
     }
 
-    public function login(){
-        return view('users.login');
+    public function auth(Request $request){
+        $request->validate([
+            'u_email' => 'required|string|email|max:255',
+            'u_password' => 'required|string|min:6',
+        ]);
+
+        $user = User::where('u_email', $request->u_email)->first();
+        if($user){
+            if(password_verify($request->u_password, $user->u_password)){
+                $request->session()->put('u_name',$user->u_name);
+                $request->session()->put('u_email',$user->u_email);
+                $request->session()->put('id',$user->id);
+                $request->session()->put('u_phone',$user->u_phone);
+                $request->session()->put('u_address',$user->u_address);
+
+                return redirect()->route('dashboard')
+                    ->with('success', 'Welcome '.$user->u_name);
+            }else{
+                return redirect()->route('login')
+                    ->with('error', 'Invalid password.');
+            }
+        }else{
+            return redirect()->route('login')
+                ->with('error', 'Invalid email.');
+        }
     }
 
     public function show(User $user)
