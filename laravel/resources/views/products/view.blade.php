@@ -10,7 +10,7 @@
         ?>
         <h1 class="text-center font-bold text-2xl">Your Products</h1>
         <div class="flex mt-4 items-center">
-            <a class="py-1 btn btn-primary px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/addproduct">
+            <a class="py-1 btn btn-primary px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/create">
             <i class="bx bx-plus"></i> Add New</a>
             <p class="mx-4">OR</p>
             <a class="py-1 btn btn-primary px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/printproducts">
@@ -39,11 +39,11 @@
                                 <td class="text-center h-[100px]">
                                     <div class="flex items-center justify-center w-full">
                                      <a href="{{ route('products.edit', $product->id) }}" class="text-blue-400 hover:text-blue-500"><i class="fa-solid fa-edit"></i></a>
-                                     <form method="POST" action="{{ route('products.destroy', $product->id) }}">
+                                     <form method="POST" action="{{ route('products.destroy', $product->id) }}" class="cursor-pointer">
                                          @csrf
                                          @method('DELETE')
                                          <input type="submit" class="hidden" name="delete" id="delete">
-                                         <label for="delete"><i class="fa-solid fa-trash-alt text-red-500 hover:text-red-600"></i></label>
+                                         <label for="delete"><i class="fa-solid cursor-pointer fa-trash-alt text-red-500 hover:text-red-600"></i></label>
                                      </form>
                                     </div>
                                 </td>

@@ -31,5 +31,5 @@ Route::get('login', function () {
 });
 
 Route::post('post-login', 'App\Http\Controllers\AuthController@postLogin'); 
-
+Route::get('logout', 'App\Http\Controllers\AuthController@logout'); 
 ?>

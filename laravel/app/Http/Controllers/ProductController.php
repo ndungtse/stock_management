@@ -4,6 +4,7 @@
 
 use App\Models\Product;
 use App\Models\UProduct;
+use Closure;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller

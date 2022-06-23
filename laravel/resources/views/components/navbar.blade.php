@@ -14,7 +14,7 @@
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg
             hover:text-blue-400" href="/inventory/overview"><i class="fa-solid fa-store"></i>Inventory</a>
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg
-            hover:text-blue-400" href="/users/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            hover:text-blue-400" href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
 
         </div>
     </nav>
