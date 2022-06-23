@@ -18,7 +18,7 @@
         </div>
         
         <div class=" overflow-x-auto w-full">
-            @if (count($products) > 0):
+            @if (count($products) > 0)
                 <table class="min-w-[500px]border-collapse border-b-2 mt-6 " id="data" align="center">
                     <thead>
                         <tr class=" border-collapse border-b-2 ">
@@ -30,17 +30,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($products as $product) :
+                        @foreach ($products as $product) 
                             <tr class="border-b-2">
-                                <td class="text-center h-[100px]">{{$product->p_name}}/td>
+                                <td class="text-center h-[100px]">{{$product->p_name}}</td>
                                 <td class="text-center h-[100px]">{{$product->price}}</td>
                                 <td class="text-center h-[100px]">{{$product->p_qoh}}</td>
                                 <td class="text-center h-[100px]">{{$product->p_type}}</td>
                                 <td class="text-center h-[100px]">
-                                    <a href="/products/updateproduct?id={{$product->id}}" class="text-blue-400 hover:text-blue-500"><i class="fa-solid fa-edit"></i></a>
-                                    <a href="/products/removeproduct?id={{$product->id}}" class="text-red-500 hover:text-red-600"><i class="fa-solid fa-trash-alt"></i></a>
-                                    <!-- <a class="px-3 py-1 text-white bg-blue-500" href='edit.php?id=".$row['p_code']"'>Edit</a>
-                                <a class="px-3 py-1 text-white bg-red-500" href="">Delete</a> -->
+                                    <div class="flex items-center justify-center w-full">
+                                     <a href="{{ route('products.edit', $product->id) }}" class="text-blue-400 hover:text-blue-500"><i class="fa-solid fa-edit"></i></a>
+                                     <form method="POST" action="{{ route('products.destroy', $product->id) }}">
+                                         @csrf
+                                         @method('DELETE')
+                                         <input type="submit" class="hidden" name="delete" id="delete">
+                                         <label for="delete"><i class="fa-solid fa-trash-alt text-red-500 hover:text-red-600"></i></label>
+                                     </form>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach
