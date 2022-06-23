@@ -30,12 +30,8 @@ class AuthController extends Controller
         $user = User::where('u_email', $request->u_email)->first();
         if($user){
             if(password_verify($request->u_password, $user->u_password)){
-                $request->session()->put('u_name',$user->u_name);
-                $request->session()->put('u_email',$user->u_email);
-                $request->session()->put('id',$user->id);
-                $request->session()->put('u_phone',$user->u_phone);
-                $request->session()->put('u_address',$user->u_address);
-
+                $request->session()->put('userdata',array('u_name'=>$user->u_name,  'u_email'=>$user->u_email, 
+                 'u_phone'=>$user->u_phone,  'u_address'=>$user->u_address,  'id'=>$user->id));
                 return redirect('/')
                     ->with('success', 'Welcome '.$user->u_name);
             }else{

@@ -49,7 +49,7 @@
 
         </div>
     @else
-        <div class="flex w-full items-center h-full mt-7 flex-col justify-center">
+        <div class="flex w-full items-center h-full mt-7 flex-col overflow-hidden justify-center">
             <p class="text-xl font-semibold">You currently have no Registered</p>
         </div>
         @endif

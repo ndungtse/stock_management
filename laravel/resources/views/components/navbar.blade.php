@@ -10,7 +10,7 @@
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg
                 hover:text-blue-400 " href="/"><i class="fa-solid fa-chart-line"></i>Dashboard</a>
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg
-             hover:text-blue-400" href="/products/view"><i class="fa-solid fa-box"></i>Products</a>
+             hover:text-blue-400" href="/products"><i class="fa-solid fa-box"></i>Products</a>
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg
             hover:text-blue-400" href="/inventory/overview"><i class="fa-solid fa-store"></i>Inventory</a>
             <a class="p-2 text-[black] w-full flex gap-2 items-center text-sm rounded-lg

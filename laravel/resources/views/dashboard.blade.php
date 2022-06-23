@@ -3,14 +3,16 @@
 <div class="flex h-[90vh] w-full overflow-y-auto">
             <div class="flex w-full h-[130vh] shadow-2xl flex-col items-center mx-auto pt-6 px-6 max-w-[1100px]">
                 <div class="flex w-full flex-col items-center justify-between">
-                    <div class="flex flex-col items-center">
-                        <i class="bx bxs-user-circle text-[5em]"></i>
-                        <div class="flex flex-col">
-                        @if ($message = Session::get('success'))
+                    @if ($message = Session::get('success'))
                         <div class="alert alert-success">
                             <p>{{ $message }}</p>
                         </div>
                         @endif
+                    <div class="flex flex-col items-center">
+                        <i class="bx bxs-user-circle text-[5em]"></i>
+                        <div class="flex flex-col items-center">
+                        <p>{{ $user['u_name'] }}</p>
+                        <p class="text-sm opacity-90">{{ $user['u_email'] }}</p>
                         </div>
                     </div>
                     <div class="flex items-center">
