@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="flex items-center">
-                        <a class="py-1 btn btn-primary px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/addproduct">
+                        <a class="py-1 btn btn-primary px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/create">
                             <i class="bx bx-plus"></i> Add New Product</a>
                         <a class="py-1 ml-3 btn btn-primary px-3 bg-blue-500 text-white rounded-md text-lg " href="/products/printproducts">
                             Print your products</a>

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', function (Request $request) {
     $user = "No user";
-    if($request->session()->has('u_name')){
+    if($request->session()->has('userdata')){
          $user = $request->session()->get('userdata');
      } else{
          echo 'No data in the session';

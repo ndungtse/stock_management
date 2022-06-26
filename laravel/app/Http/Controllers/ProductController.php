@@ -15,6 +15,7 @@ class ProductController extends Controller
         return view('products.view', compact('products'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+    
     public function create()
     {
         return view('products.add');
@@ -74,4 +75,3 @@ class ProductController extends Controller
         return redirect('products')->with('success','Product deleted successfully.');
     }
 }
-?>
